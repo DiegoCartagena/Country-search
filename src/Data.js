@@ -17,7 +17,6 @@ export function Data() {
     filtrar(e.target.value);
   }
   const groupBy=(agrupar)=>{
-    
      tablaPaises.reduce((continente, { continent,code, name, capital, emoji, languages  }) => {
       if (!continente[code]) continente[code] = [];
       continente[code].push(code,name,capital,continent.name,languages.map(len=>{return len.name}),emoji);
