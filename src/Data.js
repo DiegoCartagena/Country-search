@@ -17,10 +17,10 @@ export function Data() {
     filtrar(e.target.value);
   }
   const groupBy=(agrupar)=>{
-      continent = paises.map(con=>{return con.name});
-     tablaPaises.reduce((continente, { continent,code, name, capital,continent, emoji, languages  }) => {
-      if (!continente[continent]) continente[continent] = [];
-      continente[continent].push(code,name,capital,continent,languages.map(len=>{return len.name}),emoji);
+    
+     tablaPaises.reduce((continente, { continent,code, name, capital, emoji, languages  }) => {
+      if (!continente[code]) continente[code] = [];
+      continente[code].push(code,name,capital,continent.name,languages.map(len=>{return len.name}),emoji);
       console.log(continente);
       return continente;
     }, {});
